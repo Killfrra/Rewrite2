@@ -142,7 +142,7 @@ namespace Engine
         public void RunOnce(uint timeout = 8)
         {
             Event eevent = new();
-            while (_host.HostService(eevent, timeout) != 0)
+            while (_host.HostService(eevent, timeout) > 0)
             {
                 switch (eevent.Type)
                 {
